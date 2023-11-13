@@ -1,27 +1,28 @@
-import { FiHome } from "react-icons/fi";
+import Link from 'next/link';
+import { FiHome } from 'react-icons/fi';
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="flex min-w-3 bg-transparent p-4 rounded-lg">
+    <div className='navbar bg-base-100'>
+      <div className='navbar-start'>
+        <Link href={'/'} className='flex min-w-3 bg-transparent p-4 rounded-lg'>
           <FiHome
             style={{
-              color: "#444444",
-              fontSize: "18px",
-              margin: "5px",
+              color: '#444444',
+              fontSize: '18px',
+              margin: '5px',
             }}
           />
-          <span className="text-xl text-black">Homestead</span>
-        </div>
+          <span className='text-xl text-black'>Homestead</span>
+        </Link>
       </div>
-      <div className="navbar-end">
+      <div className='navbar-end'>
         {/* Dashboard menu */}
-        <ul className="menu menu-horizontal px-1">
+        <ul className='menu menu-horizontal px-1'>
           <li>
             <details>
               <summary>Dashboard</summary>
-              <ul className="p-2 bg-base-100">
+              <ul className='p-2 bg-base-100'>
                 <li>
                   <a>Financial Figures</a>
                 </li>
@@ -34,11 +35,11 @@ export default function Navbar() {
         </ul>
 
         {/* Transactions menu */}
-        <ul className="menu menu-horizontal px-1">
+        <ul className='menu menu-horizontal px-1'>
           <li>
             <details>
               <summary>Transactions</summary>
-              <ul className="p-2 bg-base-100">
+              <ul className='p-2 bg-base-100'>
                 <li>
                   <a>Create</a>
                 </li>

@@ -3,7 +3,10 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["unused-imports"],
+  "plugins": [
+    "unused-imports",
+    "@stylistic/js"
+  ],
   "rules": {
     "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
@@ -15,6 +18,16 @@
         "args": "after-used",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "@stylistic/js/indent": ["error", 2],
+    "@typescript-eslint/quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "jsx-quotes": [2, "prefer-single"]
   }
 }
